@@ -304,7 +304,7 @@ def trainiere_modell(modell, train_loader, val_loader,
     # Reduziert die Lernrate, wenn der Loss nicht mehr sinkt
     # "Geduld" von 10 Epochs, dann Lernrate × 0.5
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-        optimierer, patience=10, factor=0.5, verbose=False
+        optimierer, patience=10, factor=0.5#, verbose=False
     )
     
     train_losses = []
